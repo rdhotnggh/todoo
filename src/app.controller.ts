@@ -27,7 +27,7 @@ async updateTodo(@Param('id') id: string, @Body () Body: { blabla?: string }) {
 @Delete('/:id')
   async deleteTodo (@Param('id') id: string) {
     const todoId = Number(id);
-    return this.appService.deleteData(+todoId);
+    return this.appService.deleteData(todoId);
   }
 
 }

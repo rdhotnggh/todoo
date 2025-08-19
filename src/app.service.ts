@@ -21,7 +21,7 @@ export class AppService{
    */
   async creatData(data: { blabla: string }) {
     return this.dbService.todo.create({
-      data: data, // harus pakai 'data'
+      data: data,
     });
   }
 
@@ -33,7 +33,7 @@ export class AppService{
 }
 
   async deleteData(id: number){
-    return this.dbService.todo.delete({
+    return await this.dbService.todo.delete({
       where: { id },
     });
   }
