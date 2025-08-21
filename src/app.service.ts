@@ -18,20 +18,20 @@ export class AppService {
    * @param data
    * @returns
    */
-  async creatData(data: { blabla: string }) {
+  async creatData(data: { text: string }) {
     return this.dbService.todo.create({
-      data: data, // harus pakai 'data'
+      data: data,
     });
   }
 
   async updateData(id: number, data: { blabla?: string }) {
-    return this.dbService.todo.update({
-      where: { id },
-      data,
-    });
-  }
+  return this.dbService.todo.update({
+    where: { id },
+    data,
+  });
+}
 
-  async deleteData(id: number) {
+  async deleteData(id: number){
     return this.dbService.todo.delete({
       where: { id },
     });

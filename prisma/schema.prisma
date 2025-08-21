@@ -16,7 +16,8 @@ datasource db {
 
 model todo {
   id Int @id @default(autoincrement())
-  blabla String @db.VarChar(10000)
-  dibuat DateTime @default(now())
-  diperbarui DateTime @updatedAt
+  text String @db.VarChar(10000)
+  completed Boolean @default(false)
+  createAt DateTime @default(now())
+  updateAt DateTime @updatedAt
 }
