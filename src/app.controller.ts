@@ -14,12 +14,12 @@ async todo (){
 
 
 @Post()
-async createTodo(@Body() body: { blabla: string }) {
+async createTodo(@Body() body: { text: string }) {
   return this.appService.creatData(body);
 }
 
 @Patch('/:id')
-async updateTodo(@Param('id') id: string, @Body () Body: { blabla?: string }) {
+async updateTodo(@Param('id') id: string, @Body () Body: { text?: string }) {
   const todoId = Number(id);
   return await this.appService.updateData(todoId,Body);
 }

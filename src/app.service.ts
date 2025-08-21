@@ -19,13 +19,13 @@ export class AppService{
    * @param data 
    * @returns 
    */
-  async creatData(data: { blabla: string }) {
+  async creatData(data: { text: string }) {
     return this.dbService.todo.create({
       data: data,
     });
   }
 
-  async updateData(id: number, data: { blabla?: string }) {
+  async updateData(id: number, data: { text?: string }) {
   return this.dbService.todo.update({
     where: { id },
     data,
